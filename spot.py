@@ -56,8 +56,9 @@ def main():
             r = r.json()
             track_dict[track_name] = r
 
+    json_data = json.dumps(track_dict, indent=4)
     with open('data.json', 'w') as f:
-        json.dump(track_dict, f)
+        f.write(json_data)
 
 if __name__ == '__main__':
     main()
